@@ -1,4 +1,4 @@
-# nextjs-vllm-ui-uncensored
+# nextjs-vllm-ui
 
 <div align="center">
   <img src="ollama-nextjs-ui.gif">
