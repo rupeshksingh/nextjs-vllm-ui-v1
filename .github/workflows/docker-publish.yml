@@ -6,7 +6,7 @@ on:
 
 env:
   REGISTRY: docker.io
-  IMAGE_NAME: rupeshksingh/nextjs-vllm-ui-v1
+  IMAGE_NAME: rupeshkumarsingh908/nextjs-vllm-ui-v1  # Updated with your DockerHub username
 
 jobs:
   build-and-push-image:
