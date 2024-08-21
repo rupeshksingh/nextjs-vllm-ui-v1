@@ -54,7 +54,7 @@ const addSystemMessage = (messages: CoreMessage[], systemPrompt?: string) => {
 
 const formatMessages = (
   messages: CoreMessage[],
-  tokenLimit: number = 4096
+  tokenLimit: number = 512
 ): CoreMessage[] => {
   let mappedMessages: CoreMessage[] = [];
   let messagesTokenCounts: number[] = [];
