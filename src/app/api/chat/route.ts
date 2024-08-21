@@ -54,11 +54,11 @@ const addSystemMessage = (messages: CoreMessage[], systemPrompt?: string) => {
 
 const formatMessages = (
   messages: CoreMessage[],
-  tokenLimit: number = 512
+  tokenLimit: number = 1024
 ): CoreMessage[] => {
   let mappedMessages: CoreMessage[] = [];
   let messagesTokenCounts: number[] = [];
-  const reservedResponseTokens = 512;
+  const reservedResponseTokens = 256;
 
   const tokenLimitRemaining = tokenLimit - reservedResponseTokens;
   let tokenCount = 0;
@@ -121,7 +121,7 @@ export async function POST(req: Request) {
 
     const tokenLimit = process.env.VLLM_TOKEN_LIMIT
       ? parseInt(process.env.VLLM_TOKEN_LIMIT)
-      : 4096;
+      : 1024;
 
     const formattedMessages = formatMessages(
       addSystemMessage(messages, chatOptions.systemPrompt),
